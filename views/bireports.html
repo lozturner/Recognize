@@ -1,0 +1,86 @@
+<!-- views/pages/reports.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recognize</title>
+
+	<!-- CSS (load bootstrap from a CDN) -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>    
+    <!--Navigation-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+	              <span class="sr-only">Toggle navigation</span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>                        
+	          </button>
+	          <a class="navbar-brand page-scroll" href="/">Recognize</a>
+          </div>
+          
+           <div id="myNavbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+              <li><a class="page-scroll" href="/">Home</a></li>
+              <li><a class="page-scroll" href="/profile">Profile</a></li>
+              <li><a class="page-scroll" href="/bireports">Business Intelligence Reports</a></li>
+              <li><a class="page-scroll" href="/signature"><% if(typeof(signature) !== 'undefined') {%>
+                 <img src="<%= signature %>" alt="Signature" height="30" width="30"><% } %></a></li>
+              <li><a href="/signout" title="sign out">Sign out</a><li>
+              </ul>
+          </div>
+          
+        </div>
+    </nav>
+   
+    <div class="container text-center">
+           
+        <h2>Business Intelligence Reports</h2>
+        <h4>Select an option on the left</h4>
+
+            <div class="row">
+                <div class="col-sm-2">
+                   <nav id="report_nav">
+					<ul>
+						<li><button href="/reports/typeUser" class="btn graph_link" id="type">Awards by type</button></li>
+						<li><button href="/reports/monthUser" class="btn btn-block graph_link" id="month">Awards by month</button></li>
+					</ul>
+				    </nav>
+                </div> 
+                <div class="well well-graph col-sm-8">
+                <div id="graph"></div>
+                </div>
+            </div>
+       
+        <div id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                  <hr>
+                    <p class="small"><i class="fa fa-copyright"></i> Copyright 2016 Alpha team</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script src="/graphUser.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

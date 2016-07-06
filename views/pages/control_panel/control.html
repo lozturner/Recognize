@@ -1,0 +1,56 @@
+<!-- views/pages/control_panel/control.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../../partials/head.html %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../../partials/admin_header.html %>
+	</header>
+
+	<main>
+		<div class="jumbotron admin-form well">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="text-left">Control Panel</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<label><h4>Admin Functions</h4></label>
+						<ul class="list-unstyled admin-controls">
+							<li><a href="./control/add_admin" class="btn btn-lg btn-block admin-link">Create Admin</a></li>
+							<li><a href="./control/select_admin_edit" class="btn btn-lg btn-block admin-link">Edit Admin</a></li>
+							<li><a href="./control/select_admin_remove" class="btn btn-lg btn-block admin-link">Delete Admin</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-2 col-sm-offset-2">
+						<label><h4>User Functions</h4></label>
+						<ul class="list-unstyled admin-controls">
+							<li><a href="./control/add_user" class="btn btn-lg btn-block admin-link">Create User</a></li>
+							<li><a href="./control/select_user_edit" class="btn btn-lg btn-block admin-link">Edit User</a></li>
+							<li><a href="./control/select_user_remove" class="btn btn-lg btn-block admin-link">Delete User</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-2 col-sm-offset-2">
+						<label><h4>View</h4></label>
+						<ul class="list-unstyled admin-controls">
+							<li><a href="./control/view_users" class="btn btn-lg btn-block admin-link">View Users</a></li>
+							<li><a href="./control/view_awards" class="btn btn-lg btn-block admin-link">View Awards</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../../partials/admin_footer.html %>
+	</footer>
+
+</body>
+</html>

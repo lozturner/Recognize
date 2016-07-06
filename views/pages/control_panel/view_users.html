@@ -1,0 +1,69 @@
+<!-- views/pages/control_panel/success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../../partials/head.html %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../../partials/admin_header.html %>
+	</header>
+
+	<main>
+		<div class="jumbotron">
+			<div>
+				<h3 class="text-left">Administrators</h3>
+				<table class="table table-striped">
+					<tr>
+						<td>ID</td>
+						<td>Email</td>
+						<td>Creation Date</td>
+					</tr>
+					<% for(var i=0; i<users.length; i++) { %>
+						<% if(users[i].admin == 1) { %>
+							<tr>
+								<td><%= users[i].id %></td>
+								<td><%= users[i].email %></td>
+								<td><%= new Date(Date.parse(users[i].creation_date)).toDateString() %></td>
+							</tr>
+						<% } %>
+					<% } %>
+				</table>
+			</div>
+			<div>
+				<h3 class="text-left">Users</h3>
+				<table class="table table-striped">
+					<tr>
+						<td>ID</td>
+						<td>First Name</td>
+						<td>Last Name</td>
+						<td>Email</td>
+						<td>Creation Date</td>
+						<td>Signature Link</td>
+					</tr>
+					<% for(var i=0; i<users.length; i++) { %>
+						<% if(users[i].admin == 0) { %>
+							<tr>
+								<td><%= users[i].id %></td>
+								<td><%= users[i].first_name %></td>
+								<td><%= users[i].last_name %></td>
+								<td><%= users[i].email %></td>
+								<td><%= new Date(Date.parse(users[i].creation_date)).toDateString() %></td>
+								<td><%= users[i].signature_link %></td>
+							</tr>
+						<% } %>
+					<% } %>
+				</table>
+			</div>
+			<a href='http://52.24.188.242:8080/all_users.csv' class='btn btn-lg admin-link'>Download CSV</a>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../../partials/admin_footer.html %>
+	</footer>
+
+</body>
+</html>

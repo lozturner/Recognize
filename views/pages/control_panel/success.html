@@ -1,0 +1,28 @@
+<!-- views/pages/control_panel/success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head.html %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../../partials/admin_header.html %>
+    </header>
+
+    <main>
+        <div class="well jumbotron admin-form">
+            <h3 class="text-left"><%= title %></h3>
+            <p><%= string %></p>
+            <a href="/control" class="btn btn-lg btn-block admin-link">Back to Control Panel</a>
+            <a href="<%= buttonLink %>" class="btn btn-lg btn-block admin-link"><%= buttonText %></a>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../../partials/admin_footer.html %>
+    </footer>
+
+</body>
+</html>

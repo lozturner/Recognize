@@ -1,0 +1,48 @@
+<!-- views/pages/control_panel/success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../../partials/head.html %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../../partials/admin_header.html %>
+	</header>
+
+	<main>
+		<div class="jumbotron">
+			<div>
+				<h3 class="text-left">Awards</h3>
+				<table class="table table-striped">
+					<tr>
+						<td>ID</td>
+						<td>Creator ID</td>
+						<td>Award Type</td>
+						<td>Recipient Email</td>
+						<td>Recipient Name</td>
+						<td>Date Given</td>
+					</tr>
+					<% for(var i=0; i<awards.length; i++) { %>
+						<tr>
+							<td><%= awards[i].id %></td>
+							<td><%= awards[i].user_id %></td>
+							<td><%= awards[i].award_type %></td>
+							<td><%= awards[i].recipient_email %></td>
+							<td><%= awards[i].recipient_name %></td>
+							<td><%= new Date(Date.parse(awards[i].award_date)).toDateString() %></td>
+						</tr>
+					<% } %>
+				</table>
+			</div>
+			<a href='http://52.24.188.242:8080/all_awards.csv' class='btn btn-lg admin-link'>Download CSV</a>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../../partials/admin_footer.html %>
+	</footer>
+
+</body>
+</html>

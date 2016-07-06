@@ -1,0 +1,39 @@
+<!-- views/pages/reports.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head.html %>
+</head>
+<body>
+
+    <header>
+        <% include ../../partials/admin_header.html %>
+    </header>
+
+    <main>
+        <div class="jumbotron container admin-form">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Business Intelligence Reports</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <% include ../../partials/reports_nav.html %>
+                </div>
+                <div id="graph" class="col-sm-9">
+                    <p>Select an option on the left.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../../partials/admin_footer.html %>
+    </footer>
+
+</body>
+</html>
+<script src="/js/graph.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

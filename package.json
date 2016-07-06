@@ -1,0 +1,35 @@
+{
+  "name": "recognize",
+  "version": "1.0.0",
+  "description": "Web-based employee recognition tool",
+  "main": "recognize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node recognize"
+  },
+  "author": "Isaiah Fentress",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "aws-sdk": "^2.3.10",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "bookshelf": "^0.9.4",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-csv": "^0.6.0",
+    "express-session": "^1.13.0",
+    "formidable": "^1.0.17",
+    "fs": "0.0.2",
+    "fs-extra": "^0.30.0",
+    "knex": "^0.10.0",
+    "mysql": "^2.10.2",
+    "nodemailer": "^2.4.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "prompt": "^1.0.0",
+    "request": "^2.72.0",
+    "s3": "^4.4.0"
+  }
+}

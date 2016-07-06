@@ -1,0 +1,48 @@
+<!-- views/pages/control_panel/select_user.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head.html %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../../partials/admin_header.html %>
+    </header>
+
+    <main>
+        <div class="jumbotron text-center control-form container admin-form">
+            <div class="well col-sm-6 col-sm-offset-3">
+                <h2><%= title %></h2>
+                <form action="<%= action %>", method="post">
+                    <div class="form-group text-left">
+                        <label for="user[id]"><%= string %></label>
+                        <select name="user[id]">
+                            <% for(var i=0; i<users.length; i++) { %>
+                                <% if(users[i].admin == type) { 
+                                    if(users[i].admin == 1) { %>
+                                        <option value="<%= users[i].id %>"><%= users[i].email %></option>
+                                    <% } else { %>
+                                        <option value="<%= users[i].id %>"><%= users[i].first_name + " " + users[i].last_name %></option>
+                                    <% }
+                                }
+                            } %>
+                        </select>
+                    </div>
+                    <% if(action == "/control/remove_admin" || action == "/control/remove_user") { %>
+                        <input type="submit" class="btn-lg btn-danger admin-link" value="Delete">
+                    <% } else { %>
+                        <input type="submit" class="btn btn-lg admin-link" value="Select">
+                    <% } %>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../../partials/admin_footer.html %>
+    </footer>
+
+</body>
+</html>

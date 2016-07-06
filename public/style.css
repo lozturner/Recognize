@@ -1,0 +1,256 @@
+body{
+  max-width: 100%;
+  background-color: #F5F5F5;
+}
+
+.jumbotron {
+  margin-top: 40px;
+  background-color: #F5F5F5;
+  border: none;
+  overflow: hidden;
+}
+
+.well{
+  border: none;
+  height: 400px !important;
+}
+
+.long{
+  padding-top: 0px;
+  height: 610px !important;
+}
+
+.middle{
+  padding-top: 0px;
+  height: 480px !important;
+}
+
+.well-graph{
+  background: #F5F5F5;
+  border-color: #F5F5F5;
+  height: 480px !important;
+}
+
+.bigger{
+  padding-top: 0px;
+  height: 80% !important;
+}
+
+#shorter, #short{
+   padding-left: 140px !important;
+}
+
+.form-control{
+  width: 70% !important;
+}
+
+.form-group, .input-group{
+  padding-left: 100px !important;
+}
+
+.filename{
+  margin-top: 12px;
+}
+
+.centered{
+  font-weight: bold;
+}
+
+.btn{
+  background-color: #30d4a3 !important;
+}
+
+a, #welcome, #instruction{
+  color: #30d4a3;
+}
+
+p, ul{
+  font-weight: normal;
+}
+
+td {
+  padding: 10px;
+}
+
+.navbar {
+  font-size: 1.1em;
+}
+
+.navbar-brand {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.home{
+  height: 800px;
+  text-align: center;
+}
+
+hr {
+  width: 70%;
+  border: 0;
+  height: 2px;
+  background: #CCCCCC;
+}
+
+h2{
+  padding-top: 5px;
+  color: #000;
+}
+
+h3{
+  padding-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+h4{
+  padding-top: 15px;
+  color: #000;
+}
+
+.jumbotron > h1{
+  font-size: 3em;
+}
+
+#nav_report {
+  margin-top: 100px;
+  float: center;
+  padding-top: 20px;
+}
+
+#nav_report ul {
+  list-style-type: none;
+}
+
+#nav_report ul > li{
+  padding-bottom:10px;
+}
+
+#bireports{
+  margin-top: 80px;
+}
+
+#signinform, #awardform{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#signupform{
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#signupformadmin{
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#home{
+   margin-top: 100px;
+}
+
+#profilediv{
+  width: 80%;
+  margin-top: 90px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.info{
+  font-size: 1em !important;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+.red{
+  color: #FF0000 !important;
+}
+
+#report_nav {
+  float: left;
+  padding-top: 20px;
+}
+
+#report_nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#report_nav ul > li{
+  padding-bottom:10px;
+}
+
+#graph {
+  float: right;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+#graph button {
+  float: right;
+  width: 250px;
+}
+
+#graph ul{
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#graph ul > li{
+  padding-bottom: 10px;
+}
+
+.admin-controls > li {
+  padding-bottom: 20px;
+}
+
+.control-form {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.admin-form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.admin-link {
+  color: #000;
+}

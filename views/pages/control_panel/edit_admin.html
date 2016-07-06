@@ -1,0 +1,39 @@
+<!-- views/pages/control_panel/edit_admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head.html %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../../partials/admin_header.html %>
+    </header>
+
+    <main>
+        <div class="jumbotron text-center control-form container admin-form">
+            <div class="well col-sm-6 col-sm-offset-3">
+                <h3><%= title %></h3>
+                <form action="/control/admin_edited", method="post">
+                    <div class="form-group text-left">
+                        <label for="user[email]">Email</label>
+                        <input type="email" name="user[email]" class="form-control" value="<%= list.email %>" required>
+                    </div>
+                    <div class="form-group text-left">
+                        <label for="user[password]">New Password</label>
+                        <input type="password" name="user[password]" class="form-control" value="">
+                    </div>
+                    <input type="hidden" name="user[id]" value="<%= list.id %>">
+                    <input type="submit" class="btn btn-lg admin-link" value="Submit">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../../partials/admin_footer.html %>
+    </footer>
+
+</body>
+</html>

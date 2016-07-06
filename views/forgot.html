@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <title>Forgot Password</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+     <!-- Font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/style.css'/>
+</head>
+
+   <body>
+    <!--Navigation-->
+     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand page-scroll" href="/">Recognize</a>
+          </div>
+          
+           <div id="myNavbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+              <li><a class="page-scroll" href="/">Home</a></li>
+              <li><a class="page-scroll" href="/signin">Sign In</a></li>
+              <li><a class="page-scroll" href="/signup">Sign Up</a></li>
+              </ul>
+          </div>
+          
+        </div>
+      </nav>
+
+      <div class="jumbotron text-center">
+        
+        <div class="col-sm-6 col-sm-offset-3">
+          <% if(typeof(errorMessage) !== 'undefined') {%>
+                <span class="red"><%= errorMessage %></span><% } %>
+
+          <% if(typeof(message) !== 'undefined') {%>
+                <span><%= message %></span><% } %>
+
+          <h3>Forgot Your Password?</h3>
+          
+          <form method="post" action="/forgot">
+    		              
+             <div class="form-group text-left" id="shorter">
+                <label for="email">Enter Your Email: </label>
+                <input type="text" class="form-control" name="email" id="email"
+                   placeholder="email" required="true"/>
+             </div>
+
+             <input type="submit" class="btn btn-lg" name="forgot" id="forgot" value="Send Reset"/>          
+          </form>
+
+        </div>
+      </div>
+
+      <script src='//code.jquery.com/jquery-1.11.0.min.js'></script>
+      <script src='/script.js'></script>
+   </body>
+</html>
